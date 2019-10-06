@@ -1,0 +1,11 @@
+{
+  "name": "gin-fs",
+  "version": "1.0.0",
+  "description": "Filesystem toolkit for gin",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "aubrgin",
+  "license": "MIT"
+}
