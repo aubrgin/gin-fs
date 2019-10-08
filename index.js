@@ -5,12 +5,16 @@ const os = require('os');
 module.exports = {
   ginPath: `${os.homedir()}/.gin/`,
   getConfig(key, namespace = 'gin') {
-    let config = JSON.parse(fs.readFileSync(this.namespacedPath(namespace), 'utf8')) || {};
+    const path = this.namespacedPath(namespace);
+
+    let config = fs.existsSync(path) ? JSON.parse(fs.readFileSync(path, 'utf8')) : {};
 
     return config[key];
   },
   setConfig(key, value, namespace = 'gin') {
-    let config = JSON.parse(fs.readFileSync(this.namespacedPath(namespace), 'utf8')) || {};
+    const path = this.namespacedPath(namespace);
+
+    let config = fs.existsSync(path) ? JSON.parse(fs.readFileSync(path, 'utf8')) : {};
 
     config[key] = value;
 
