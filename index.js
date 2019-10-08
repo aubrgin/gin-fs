@@ -18,7 +18,7 @@ module.exports = {
 
     config[key] = value;
 
-    fs.writeFileSync(this.namespacedPath(namespace). JSON.stringify(config));
+    fs.writeFileSync(this.namespacedPath(namespace), JSON.stringify(config));
   },
   namespacedPath(namespace) {
     return `${this.ginPath}/${namespace}`;
