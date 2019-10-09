@@ -1,6 +1,6 @@
 {
   "name": "@aubrgin/gin-fs",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Filesystem toolkit for gin",
   "main": "index.js",
   "scripts": {
